@@ -19,6 +19,8 @@
 - (void)moveViewWithGestureRecognizer: (UIPanGestureRecognizer *)panGestureRecognizer;
 - (IBAction)changeBackground;
 - (UIColor*) randomizeColor;
+- (void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer;
+
 
 @end
 

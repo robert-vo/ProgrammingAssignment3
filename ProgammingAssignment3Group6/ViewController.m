@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UICollisionBehaviorDelegate>
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    UICollisionBehavior* _collision;
+    UIDynamicAnimator* _animator;
+}
 
 @synthesize TopView, BottomView, LeftView, RightView, Object;
 //test
@@ -27,7 +30,18 @@
                                                     initWithTarget:self action: @selector(moveViewWithGestureRecognizer:)];
     [self.Object addGestureRecognizer:panGestureRecognizer];
     
+    [self.view addSubview:Object];
     
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    _collision = [[UICollisionBehavior alloc]
+                 initWithItems:@[Object]];
+    _collision.translatesReferenceBoundsIntoBoundary = YES;
+    [_animator addBehavior:_collision];
+    
+    
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
+    [self.Object addGestureRecognizer:pinchGestureRecognizer];
+
 }
 
 
@@ -73,10 +87,17 @@
     }
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
+    //self.Object.transform = CGAffineTransformScale(self.Object.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+    [Object setFrame:CGRectMake(Object.frame.origin.x, Object.frame.origin.y, 100, 100)];
+    pinchGestureRecognizer.scale = 1.0;
+}
 
 @end

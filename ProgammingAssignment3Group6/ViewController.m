@@ -13,10 +13,20 @@
 @end
 
 @implementation ViewController
+
+@synthesize TopView, BottomView, LeftView, RightView, Object;
 //test
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UITapGestureRecognizer* tapRecon = [[UITapGestureRecognizer alloc]
+                                        initWithTarget:self action:@selector(objectDoubleTap:)];
+    tapRecon.numberOfTapsRequired = 2;
+    [self.Object addGestureRecognizer:tapRecon];
+    
+}
+
+- (void)objectDoubleTap:(UIGestureRecognizer*)recognizer {
+    //Do Stuff Here
 }
 
 - (void)didReceiveMemoryWarning {

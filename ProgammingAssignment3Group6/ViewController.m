@@ -25,6 +25,30 @@
     
 }
 
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion == UIEventSubtypeMotionShake){
+        [self changeBackground];
+        
+    }
+}
+
+- (IBAction)changeBackground{
+    self.view.backgroundColor = [self randomizeColor];
+}
+
+- (UIColor*) randomizeColor{
+    CGFloat hue = (arc4random() % 256 / 256.0);
+    CGFloat saturation =(arc4random() % 128 / 256.0) + 0.5;
+    CGFloat brightness =(arc4random() % 128 / 256.0) + 0.5;
+    UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    return color;
+}
+
+
 - (void)objectDoubleTap:(UIGestureRecognizer*)recognizer {
     //Do Stuff Here
 }

@@ -69,6 +69,7 @@
     else {
         [Object.layer setCornerRadius:100.0f];
         [Object.layer setMasksToBounds:YES];
+        [Object setFrame:CGRectMake(Object.frame.origin.x, Object.frame.origin.y, 100, 200)];
     }
 }
 

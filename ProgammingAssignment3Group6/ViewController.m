@@ -24,7 +24,7 @@
     [self.Object addGestureRecognizer:tapRecon];
     
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
-                                                    initWithTarget:self action: @selector(moveViewWithGestureRecognizer)];
+                                                    initWithTarget:self action: @selector(moveViewWithGestureRecognizer:)];
     [self.Object addGestureRecognizer:panGestureRecognizer];
     
     

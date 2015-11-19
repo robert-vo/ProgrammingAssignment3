@@ -112,7 +112,7 @@
 
 -(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
     self.Object.transform = CGAffineTransformScale(self.Object.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
-    [Object setFrame:CGRectMake(Object.frame.origin.x, Object.frame.origin.y, 100, 100)];
+    //[Object setFrame:CGRectMake(Object.frame.origin.x, Object.frame.origin.y, 100, 100)];
     pinchGestureRecognizer.scale = 1.0;
 }
 

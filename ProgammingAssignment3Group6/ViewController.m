@@ -50,7 +50,14 @@
 
 
 - (void)objectDoubleTap:(UIGestureRecognizer*)recognizer {
-    //Do Stuff Here
+    if(Object.layer.cornerRadius == 100.0f) {
+        [Object.layer setCornerRadius:0.0f];
+        [Object.layer setMasksToBounds:YES];
+    }
+    else {
+        [Object.layer setCornerRadius:100.0f];
+        [Object.layer setMasksToBounds:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

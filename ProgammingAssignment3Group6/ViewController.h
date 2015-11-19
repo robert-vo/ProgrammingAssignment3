@@ -16,5 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIView *Object;
 
 
+- (void)moveViewWithGestureRecognizer: (UIPanGestureRecognizer *)panGestureRecognizer;
+- (IBAction)changeBackground;
+- (UIColor*) randomizeColor;
+
 @end
 

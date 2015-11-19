@@ -23,7 +23,19 @@
     tapRecon.numberOfTapsRequired = 2;
     [self.Object addGestureRecognizer:tapRecon];
     
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
+                                                    initWithTarget:self action: @selector(moveViewWithGestureRecognizer)];
+    [self.Object addGestureRecognizer:panGestureRecognizer];
+    
+    
 }
+
+
+- (void)moveViewWithGestureRecognizer: (UIPanGestureRecognizer *)panGestureRecognizer{
+    CGPoint touchLocation = [panGestureRecognizer locationInView:self.view];
+    self.Object.center = touchLocation;
+}
+
 
 - (BOOL)canBecomeFirstResponder{
     return YES;

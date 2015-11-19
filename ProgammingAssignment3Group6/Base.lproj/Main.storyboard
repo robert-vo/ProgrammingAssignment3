@@ -32,20 +32,27 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.26617198578327672" blue="0.86274944863421887" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-XX-SgE">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.065465449879999998" blue="0.032715775000000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzV-Th-yGK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="39"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.50047219394947839" green="1" blue="0.79993509465179813" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-XX-SgE">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.065465449879999998" blue="0.032715775000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="BottomView" destination="ma8-NZ-cXp" id="akh-m5-C0o"/>
+                        <outlet property="LeftView" destination="Ct8-r8-cpD" id="JaP-hZ-Zqt"/>
+                        <outlet property="Object" destination="6bX-XX-SgE" id="wx3-KA-8Tt"/>
+                        <outlet property="RightView" destination="eSH-in-DtA" id="FjI-nc-caF"/>
+                        <outlet property="TopView" destination="kzV-Th-yGK" id="6eO-np-B7h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

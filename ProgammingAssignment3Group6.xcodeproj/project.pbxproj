@@ -14,6 +14,9 @@
 		F629881F1BFE6F5200734819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F629881E1BFE6F5200734819 /* Assets.xcassets */; };
 		F62988221BFE6F5200734819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62988201BFE6F5200734819 /* LaunchScreen.storyboard */; };
 		F629882D1BFE6F5200734819 /* ProgammingAssignment3Group6Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F629882C1BFE6F5200734819 /* ProgammingAssignment3Group6Tests.m */; };
+		F62988381BFE6F6800734819 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62988371BFE6F6800734819 /* CoreLocation.framework */; };
+		F629883A1BFE6F7200734819 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62988391BFE6F7200734819 /* CoreMotion.framework */; };
+		F629883C1BFE6F7B00734819 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F629883B1BFE6F7B00734819 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		F62988281BFE6F5200734819 /* ProgammingAssignment3Group6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgammingAssignment3Group6Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629882C1BFE6F5200734819 /* ProgammingAssignment3Group6Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgammingAssignment3Group6Tests.m; sourceTree = "<group>"; };
 		F629882E1BFE6F5200734819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F62988371BFE6F6800734819 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F62988391BFE6F7200734819 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F629883B1BFE6F7B00734819 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F629883C1BFE6F7B00734819 /* MapKit.framework in Frameworks */,
+				F629883A1BFE6F7200734819 /* CoreMotion.framework in Frameworks */,
+				F62988381BFE6F6800734819 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,9 @@
 		F62988061BFE6F5100734819 = {
 			isa = PBXGroup;
 			children = (
+				F629883B1BFE6F7B00734819 /* MapKit.framework */,
+				F62988391BFE6F7200734819 /* CoreMotion.framework */,
+				F62988371BFE6F6800734819 /* CoreLocation.framework */,
 				F62988111BFE6F5200734819 /* ProgammingAssignment3Group6 */,
 				F629882B1BFE6F5200734819 /* ProgammingAssignment3Group6Tests */,
 				F62988101BFE6F5200734819 /* Products */,
@@ -344,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProgammingAssignment3Group6/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cpl.ubicomp.ProgammingAssignment3Group6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProgammingAssignment3Group6/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cpl.ubicomp.ProgammingAssignment3Group6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -404,6 +418,7 @@
 				F62988331BFE6F5200734819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F62988341BFE6F5200734819 /* Build configuration list for PBXNativeTarget "ProgammingAssignment3Group6Tests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +427,7 @@
 				F62988361BFE6F5200734819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

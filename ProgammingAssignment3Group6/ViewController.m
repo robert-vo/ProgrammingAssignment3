@@ -20,6 +20,7 @@
 @synthesize TopView, BottomView, LeftView, RightView, Object;
 //test
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     UITapGestureRecognizer* tapRecon = [[UITapGestureRecognizer alloc]
                                         initWithTarget:self action:@selector(objectDoubleTap:)];
@@ -48,19 +49,19 @@
 - (void)moveViewWithGestureRecognizer: (UIPanGestureRecognizer *)panGestureRecognizer{
     CGPoint touchLocation = [panGestureRecognizer locationInView:self.view];
     self.Object.center = touchLocation;
-    if(Object.center.y >=960 ){
+    if((Object.center.y - Object.frame.origin.y/2) >= 960){
         Object.backgroundColor = [UIColor yellowColor];
     }
-    else if (Object.center.y <=25){
+    else if ((Object.center.y + Object.frame.origin.y/2) <=25){
         Object.backgroundColor = [UIColor blueColor];
         
     }
-    else if (Object.center.x <=25){
+    else if ((Object.center.x + Object.frame.origin.x/2) <=25){
         Object.backgroundColor = [UIColor greenColor];
         
     }
     
-    else if (Object.center.x >=743){
+    else if ((Object.center.x - Object.frame.origin.x/2) >=743){
         Object.backgroundColor = [UIColor purpleColor];
         
     }
@@ -114,7 +115,11 @@
     self.Object.transform = CGAffineTransformScale(self.Object.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
     //[Object setFrame:CGRectMake(Object.frame.origin.x, Object.frame.origin.y, 100, 100)];
     pinchGestureRecognizer.scale = 1.0;
+    
+    
 }
+
+
 
 
 
